@@ -1,0 +1,334 @@
+_______________________________________________________________________
+
+The C++ Learning notes.
+Created by: Vikas Yadav
+Langauge Created by : Bjarne Stroustrup.
+Date: 02-01-21
+________________________________________________________________________
+
+
+Fun-fact: C++ was not the first OOPS langauge. It was inspired by Simula67 (Computer
+Simulation langauge).
+Fun-fact: Java is written in C++.
+
+--> C++ is a middle level langauge, means you can do low and high level programming in that.
+--> C++ supports procedural Langauge, Object-Oriented, and Generic Programming Paradigmn.
+--> C++ programs can use existing C software libraries.
+____________________________________________________________________________
+Concept of Classes and Objects
+
+--> Class is a blueprint of an Object.
+--> class is a description of Object's property set and set of operations
+-->Creating class is as good as defining a new data type.(User defined data type)
+-->Class is a means to achieve encapsulation.
+--> Object is run Time Entity.
+--> Object is an instance of a class.
+_______________________________________________________________________________
+Identifiers
+
+--> Primary Constants:
+Integer = 22,-93
+Real= 9.0 , 8.9
+Character= 'a','q','3',' '  /* single Quotes */ 
+--> Secondary Constants:
+Array 
+string = "Bhopal","James" 
+Pointer
+Union
+Structure
+Enumerator
+Class
+
+Variables:
+--> Variables are the names of memory locations where we store data.
+--> Variable name is any combination of alphabet(a to z or A to Z), digit(0 to 0 )
+and a underscore
+--> Valid variable name cannot start with digit
+
+Data Types:
+int(2bytes) -->integer
+char(1byte) -->character
+float (4bytes) -->real
+double (8bytes) --> real
+void
+
+--> Unlike C, you can declare variables even after action statements(like clrscr();).
+_________________________________________________________________________________
+Input and Output in Cpp
+
+
+Output Instructions
+--> In C, standard output device is monitor and printf()
+ is use to send data/message to monitor 
+
+-->printf() is a predefined function
+
+--> In cpp we, can use cout to send data/message to monitor.[cout is not a function.]
+
+-->cout is a predefined object in C++
+
+--> The operator << is called the insertion or put to operator.
+Lets see a example of c++ cout object.
+
+in C if we want to print something then we normally use, 
+Printf("sum of %d and %d is %d", a,b,c)
+but here in c++ we don't have to worry about type specifier or 
+%d or %f stuff we can write things like 
+
+cout << "sum of "<<a<<" and "<<b<<" is "<<c;
+
+remember  <<  is put to operator{Insertion Operator}.
+
+Input Instruction
+
+
+
+--> In C, Standard input device is Keyboard and Scanf()
+is use to recieve data from Keyboard.
+
+--> Scanf() is a predefined function
+
+--> In C++, We can use cin to input data from keyboard
+
+-->The indentifier cin is a predefined object in C++
+
+--> The operator >> is known as extraction or get from operator.
+
+like in C
+ 
+scanf("%d",&a);
+
+C++ ====  cin >>a;
+
+scanf("%d %d ",&a ,&c);
+
+C++ === cin >> a >>c;
+
+----------------------------------------------------------------
+Remember
+
+Accoring to the ANSI standards for C langauge,explicit declaration
+of function is recommended but not mandatory.
+
+ANSI standards for C++ langauge says explicit declaration of function is compulsory
+
+--> Predefined functions are declared in header files, So whenever you are using any predefined 
+function in your code, you have to include specific header file that contains its 
+declaration.
+---------------------------------------------------------------------------------------------
+About IOSTREAM.H
+---------------------------------------------------------------------------------------------
+
+-->We need to include header file iostream.h, it contians declarationfor the identifiers
+cout and the operator << and also for the identifier cin and operator >>.
+
+-->Header file contains declarations of identifiers.
+
+-->Identifiers can be function names, Variables, objects, Macros ETC.
+
+--------------------
+endl
+--------------------
+
+--> Inserting endl into the output stram causes the screen cursor to move on the 
+beginning of the next line.
+
+--> endl is a manipulator and it is declared in iostream.h
+_____________________________________________________________________________________________
+Variables 
+
+Types of Variables:Ordinary Variable and Refrence Variable. 
+In C we have: ordinary variable and Pointers
+int x = 5;
+int *p;
+p = &x 
+
+--> Reference means address
+--> Reference variable is an internal pointer
+--> Declaration of Reference variable is preceded with '&' symbol(but do not read it as 
+'address of')
+--> Reference variable must be initialized durig declaration.
+-->It can be initialised with already declared variables only.
+--> Reference variable can not be updated.
+
+_____________________________________________________________________________________________
+------------------
+    Functions
+------------------
+--> Function is block of code performing a unit task.
+--> Function has a name, return type and arguments.
+--> Function is a way to achive modularization
+--> Functions are predefined and user-defined.
+--> Predefined Functions are declared in header files and defined in library files.
+--> We have to something like Function declaration in C++. That is of two type,
+local declaration and global declaration.
+--> Function Declaration is also know as Function prototype.
+--> function need to be declared before use(Just like variables)
+--> Functions are be decalred locally or globally.
+--> Fucntion definition is a block of code.
+--> When formal arguments are reference variable, it is function call be reference.
+________________
+Inline Function  
+________________
+--> To eliminate the cost of calls to small functions, C++ proposes a new feature called Inline
+Function.(Use inline Keyword during declaration.)
+--> An Inline Function is a function that is expanded in line when it is invoked.
+--> Compiler replaces the function call with the corresponding function code.
+--> inline is a request not a command.
+--> The benefit of speed of inline functions reduces as the function grows in size.
+--> So the compiler may ignore the request in some situations.
+--> Few of them:
+   --> Function containing loops,switch,goto.
+   --> Function with recursion.
+   --> Containing static variables.
+
+
+________________________________________________________________________________________________
+
+-----------------
+Structures
+-----------------
+--> Structures ais collection of dissimilar elements. 
+--> Structures is a way to group variables.
+-->   ** Structures is used to create data type.
+
+During assigning a string to a character array you are not able to do that normally.
+You have to call a function name strcpy();
+Think Like:
+char title[20]; // Character array of length 20
+Now we have to assign a string "Vikas" to it so 
+in that case we do something like...
+
+strcpy(title,"Vikas") // This will assign the string to charcter array.
+
+*** In c++ We can define Functions/Methods inside the Structure.
+This sort of provide Encapsulation.
+
+In here at C++ we have Data security concept in structures as well.
+Like since we can make functions inside the structures so we can do some type checking. 
+which would easily tell us that is that data whatever we want to feed or store in the 
+member of the structure is valid or not. So that would be help in data security.
+
+So we can also use the concept of Public or private in structures so that it would be
+falls under data security.
+
+_______________________________________________________________________________________________
+
+------------
+Classes 
+------------
+Lecture -19 
+[Saurabh Shukla]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
