@@ -217,8 +217,11 @@ ________________________________________________________________________________
 ------------
 Classes 
 ------------
-Lecture -19 
-[Saurabh Shukla]
+
+--> The only difference between structure and class is that,
+	The members of structure are by default public.
+	The members of class are by default Private
+
 
 
 
