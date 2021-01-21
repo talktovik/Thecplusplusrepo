@@ -1,4 +1,3 @@
-﻿  Source.cpp
-  log.cpp
-  Generating Code...
-  C++Fromcherno.vcxproj -> C:\Users\Vikas\Desktop\C++Fromcherno\Debug\C++Fromcherno.exe
+﻿  log.cpp
+Source.obj : error LNK2019: unresolved external symbol "void __cdecl log(char const *)" (?log@@YAXPBD@Z) referenced in function _main
+E:\C++\Thecplusplusrepo\C++Fromcherno\Debug\C++Fromcherno.exe : fatal error LNK1120: 1 unresolved externals
