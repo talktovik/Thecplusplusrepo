@@ -73,6 +73,7 @@ PUBLIC	?funthree@@YAXXZ				; funthree
 PUBLIC	?hypo@@YA_JHH@Z					; hypo
 PUBLIC	??$pow@HH$0A@@@YANHH@Z				; pow<int,int,0>
 PUBLIC	?checkkaro@@YAX_J@Z				; checkkaro
+PUBLIC	?ref@@YAXXZ					; ref
 PUBLIC	??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
 PUBLIC	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
 PUBLIC	??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
@@ -635,6 +636,85 @@ $LN1@Sentry_bas:
 	pop	ebp
 	ret	4
 ??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ENDP ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT ?ref@@YAXXZ
+_TEXT	SEGMENT
+_b$ = -24						; size = 4
+_a$ = -12						; size = 4
+__$ArrayPad$ = -4					; size = 4
+?ref@@YAXXZ PROC					; ref, COMDAT
+; File E:\C++\Thecplusplusrepo\C++Fromcherno\Functions.cpp
+; Line 35
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 220				; 000000dcH
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-220]
+	mov	ecx, 55					; 00000037H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	mov	eax, DWORD PTR ___security_cookie
+	xor	eax, ebp
+	mov	DWORD PTR __$ArrayPad$[ebp], eax
+	mov	ecx, OFFSET __4FB5D3FE_Functions@cpp
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 37
+	mov	DWORD PTR _a$[ebp], 5
+; Line 39
+	lea	eax, DWORD PTR _a$[ebp]
+	mov	DWORD PTR _b$[ebp], eax
+; Line 40
+	mov	eax, DWORD PTR _b$[ebp]
+	mov	DWORD PTR [eax], 2
+; Line 41
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	edi, esp
+	mov	eax, DWORD PTR _a$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z
+	cmp	edi, esp
+	call	__RTC_CheckEsp
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 43
+	push	edx
+	mov	ecx, ebp
+	push	eax
+	lea	edx, DWORD PTR $LN5@ref
+	call	@_RTC_CheckStackVars@8
+	pop	eax
+	pop	edx
+	pop	edi
+	pop	esi
+	pop	ebx
+	mov	ecx, DWORD PTR __$ArrayPad$[ebp]
+	xor	ecx, ebp
+	call	@__security_check_cookie@4
+	add	esp, 220				; 000000dcH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+	npad	2
+$LN5@ref:
+	DD	1
+	DD	$LN4@ref
+$LN4@ref:
+	DD	-12					; fffffff4H
+	DD	4
+	DD	$LN3@ref
+$LN3@ref:
+	DB	97					; 00000061H
+	DB	0
+?ref@@YAXXZ ENDP					; ref
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT ?checkkaro@@YAX_J@Z
@@ -1517,7 +1597,7 @@ ___formal$ = 8						; size = 4
 ___formal$ = 12						; size = 4
 ?__empty_global_delete@@YAXPAXI@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Functions.cpp
-; Line 32
+; Line 44
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H
@@ -1547,7 +1627,7 @@ _TEXT	SEGMENT
 ___formal$ = 8						; size = 4
 ?__empty_global_delete@@YAXPAX@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Functions.cpp
-; Line 32
+; Line 44
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H

@@ -29,3 +29,15 @@ void checkkaro(long long int bada) {
 	else
 		std::cout << "sayad sahi hoga";
 }
+
+//references
+
+void ref() {
+
+	int a = 5;
+	//int* b = &a;
+	int& b = a;
+	b = 2;
+	std::cout << a
+		<< std::endl;
+}

@@ -55,9 +55,9 @@ __F91FBE2D_Mainfile@cpp DB 01H
 __2A5E89D1_istream DB 01H
 __498EBCEB_ostream DB 01H
 __00FC34F0_streambuf DB 01H
-__E561D725_iterator DB 01H
 __1AD4885C_iosfwd DB 01H
 __9BE6F741_utility DB 01H
+__E561D725_iterator DB 01H
 __6CF96053_xstddef DB 01H
 __811E3AC7_xatomic@h DB 01H
 msvcjmc	ENDS
@@ -66,22 +66,24 @@ PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
 PUBLIC	?length@?$_Narrow_char_traits@DH@std@@SAIQBD@Z	; std::_Narrow_char_traits<char,int>::length
 PUBLIC	?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NABH0@Z ; std::_Narrow_char_traits<char,int>::eq_int_type
 PUBLIC	?eof@?$_Narrow_char_traits@DH@std@@SAHXZ	; std::_Narrow_char_traits<char,int>::eof
-PUBLIC	_main
+PUBLIC	?setLevel@Log@@QAEXH@Z				; Log::setLevel
+PUBLIC	?Warn@Log@@QAEXPBD@Z				; Log::Warn
+PUBLIC	?Info@Log@@QAEXPBD@Z				; Log::Info
+PUBLIC	?Error@Log@@QAEXPBD@Z				; Log::Error
+PUBLIC	??0Log@@QAE@XZ					; Log::Log
 PUBLIC	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
 PUBLIC	??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+PUBLIC	_main
 PUBLIC	??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
 PUBLIC	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
 PUBLIC	??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
 PUBLIC	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
 PUBLIC	??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QBE_NXZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::operator bool
 PUBLIC	__JustMyCode_Default
-PUBLIC	??_C@_0BA@NCMFPEOB@Size?5of?5char?5?3?5@	; `string'
-PUBLIC	??_C@_0P@OJKOIDBL@Size?5of?5int?5?3?5@		; `string'
-PUBLIC	??_C@_0BF@OPBLNPLJ@Size?5of?5short?5int?5?3?5@	; `string'
-PUBLIC	??_C@_0BE@HJNKIOAA@Size?5of?5long?5int?5?3?5@	; `string'
-PUBLIC	??_C@_0BB@LKHNILDD@Size?5of?5float?5?3?5@	; `string'
-PUBLIC	??_C@_0BC@JKIGCFCL@Size?5of?5double?5?3?5@	; `string'
-PUBLIC	??_C@_0BD@LGAMIAEI@Size?5of?5wchar_t?5?3?5@	; `string'
+PUBLIC	??_C@_0L@NGGLNKAL@?$FLWARNING?$FN?3@		; `string'
+PUBLIC	??_C@_07EFAGJHKE@?$FLInfo?$FN?3@		; `string'
+PUBLIC	??_C@_08IHOKMCDK@?$FLERROR?$FN?3@		; `string'
+PUBLIC	??_C@_06KPGIMOHP@Hello?$CB@			; `string'
 EXTRN	_strlen:PROC
 EXTRN	?uncaught_exception@std@@YA_NXZ:PROC		; std::uncaught_exception
 EXTRN	__imp_?good@ios_base@std@@QBE_NXZ:PROC
@@ -97,9 +99,9 @@ EXTRN	__imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ:PROC
 EXTRN	__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z:PROC
 EXTRN	__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ:PROC
 EXTRN	__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z:PROC
-EXTRN	__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z:PROC
 EXTRN	__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z:PROC
 EXTRN	__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ:PROC
+EXTRN	__imp_?get@?$basic_istream@DU?$char_traits@D@std@@@std@@QAEHXZ:PROC
 EXTRN	@_RTC_CheckStackVars@8:PROC
 EXTRN	@__CheckForDebuggerJustMyCode@4:PROC
 EXTRN	@__security_check_cookie@4:PROC
@@ -107,6 +109,7 @@ EXTRN	__RTC_CheckEsp:PROC
 EXTRN	__RTC_InitBase:PROC
 EXTRN	__RTC_Shutdown:PROC
 EXTRN	___CxxFrameHandler3:PROC
+EXTRN	__imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A:BYTE
 EXTRN	__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A:BYTE
 EXTRN	___security_cookie:DWORD
 ;	COMDAT rtc$TMZ
@@ -117,33 +120,21 @@ rtc$TMZ	ENDS
 rtc$IMZ	SEGMENT
 __RTC_InitBase.rtc$IMZ DD FLAT:__RTC_InitBase
 rtc$IMZ	ENDS
-;	COMDAT ??_C@_0BD@LGAMIAEI@Size?5of?5wchar_t?5?3?5@
+;	COMDAT ??_C@_06KPGIMOHP@Hello?$CB@
 CONST	SEGMENT
-??_C@_0BD@LGAMIAEI@Size?5of?5wchar_t?5?3?5@ DB 'Size of wchar_t : ', 00H ; `string'
+??_C@_06KPGIMOHP@Hello?$CB@ DB 'Hello!', 00H		; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0BC@JKIGCFCL@Size?5of?5double?5?3?5@
+;	COMDAT ??_C@_08IHOKMCDK@?$FLERROR?$FN?3@
 CONST	SEGMENT
-??_C@_0BC@JKIGCFCL@Size?5of?5double?5?3?5@ DB 'Size of double : ', 00H ; `string'
+??_C@_08IHOKMCDK@?$FLERROR?$FN?3@ DB '[ERROR]:', 00H	; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0BB@LKHNILDD@Size?5of?5float?5?3?5@
+;	COMDAT ??_C@_07EFAGJHKE@?$FLInfo?$FN?3@
 CONST	SEGMENT
-??_C@_0BB@LKHNILDD@Size?5of?5float?5?3?5@ DB 'Size of float : ', 00H ; `string'
+??_C@_07EFAGJHKE@?$FLInfo?$FN?3@ DB '[Info]:', 00H	; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0BE@HJNKIOAA@Size?5of?5long?5int?5?3?5@
+;	COMDAT ??_C@_0L@NGGLNKAL@?$FLWARNING?$FN?3@
 CONST	SEGMENT
-??_C@_0BE@HJNKIOAA@Size?5of?5long?5int?5?3?5@ DB 'Size of long int : ', 00H ; `string'
-CONST	ENDS
-;	COMDAT ??_C@_0BF@OPBLNPLJ@Size?5of?5short?5int?5?3?5@
-CONST	SEGMENT
-??_C@_0BF@OPBLNPLJ@Size?5of?5short?5int?5?3?5@ DB 'Size of short int : ', 00H ; `string'
-CONST	ENDS
-;	COMDAT ??_C@_0P@OJKOIDBL@Size?5of?5int?5?3?5@
-CONST	SEGMENT
-??_C@_0P@OJKOIDBL@Size?5of?5int?5?3?5@ DB 'Size of int : ', 00H ; `string'
-CONST	ENDS
-;	COMDAT ??_C@_0BA@NCMFPEOB@Size?5of?5char?5?3?5@
-CONST	SEGMENT
-??_C@_0BA@NCMFPEOB@Size?5of?5char?5?3?5@ DB 'Size of char : ', 00H ; `string'
+??_C@_0L@NGGLNKAL@?$FLWARNING?$FN?3@ DB '[WARNING]:', 00H ; `string'
 CONST	ENDS
 ;	COMDAT xdata$x
 xdata$x	SEGMENT
@@ -646,6 +637,91 @@ $LN1@Sentry_bas:
 	pop	ebp
 	ret	4
 ??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ENDP ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT _main
+_TEXT	SEGMENT
+_log$ = -24						; size = 16
+__$ArrayPad$ = -4					; size = 4
+_main	PROC						; COMDAT
+; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
+; Line 103
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 220				; 000000dcH
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-220]
+	mov	ecx, 55					; 00000037H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	mov	eax, DWORD PTR ___security_cookie
+	xor	eax, ebp
+	mov	DWORD PTR __$ArrayPad$[ebp], eax
+	mov	ecx, OFFSET __F91FBE2D_Mainfile@cpp
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 104
+	lea	ecx, DWORD PTR _log$[ebp]
+	call	??0Log@@QAE@XZ
+; Line 105
+	mov	eax, DWORD PTR _log$[ebp+4]
+	push	eax
+	lea	ecx, DWORD PTR _log$[ebp]
+	call	?setLevel@Log@@QAEXH@Z			; Log::setLevel
+; Line 106
+	push	OFFSET ??_C@_06KPGIMOHP@Hello?$CB@
+	lea	ecx, DWORD PTR _log$[ebp]
+	call	?Warn@Log@@QAEXPBD@Z			; Log::Warn
+; Line 107
+	push	OFFSET ??_C@_06KPGIMOHP@Hello?$CB@
+	lea	ecx, DWORD PTR _log$[ebp]
+	call	?Error@Log@@QAEXPBD@Z			; Log::Error
+; Line 108
+	push	OFFSET ??_C@_06KPGIMOHP@Hello?$CB@
+	lea	ecx, DWORD PTR _log$[ebp]
+	call	?Info@Log@@QAEXPBD@Z			; Log::Info
+; Line 109
+	mov	esi, esp
+	mov	ecx, DWORD PTR __imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
+	call	DWORD PTR __imp_?get@?$basic_istream@DU?$char_traits@D@std@@@std@@QAEHXZ
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 112
+	xor	eax, eax
+	push	edx
+	mov	ecx, ebp
+	push	eax
+	lea	edx, DWORD PTR $LN5@main
+	call	@_RTC_CheckStackVars@8
+	pop	eax
+	pop	edx
+	pop	edi
+	pop	esi
+	pop	ebx
+	mov	ecx, DWORD PTR __$ArrayPad$[ebp]
+	xor	ecx, ebp
+	call	@__security_check_cookie@4
+	add	esp, 220				; 000000dcH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+	npad	1
+$LN5@main:
+	DD	1
+	DD	$LN4@main
+$LN4@main:
+	DD	-24					; ffffffe8H
+	DD	16					; 00000010H
+	DD	$LN3@main
+$LN3@main:
+	DB	108					; 0000006cH
+	DB	111					; 0000006fH
+	DB	103					; 00000067H
+	DB	0
+_main	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z
@@ -1156,162 +1232,262 @@ __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_trait
 text$x	ENDS
 ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ENDP ; std::operator<<<std::char_traits<char> >
 ; Function compile flags: /Odtp /RTCsu /ZI
-;	COMDAT _main
+;	COMDAT ??0Log@@QAE@XZ
 _TEXT	SEGMENT
-_main	PROC						; COMDAT
-; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
-; Line 8
+_this$ = -8						; size = 4
+??0Log@@QAE@XZ PROC					; Log::Log, COMDAT
+; _this$ = ecx
 	push	ebp
 	mov	ebp, esp
-	sub	esp, 192				; 000000c0H
+	sub	esp, 204				; 000000ccH
 	push	ebx
 	push	esi
 	push	edi
-	lea	edi, DWORD PTR [ebp-192]
-	mov	ecx, 48					; 00000030H
+	push	ecx
+	lea	edi, DWORD PTR [ebp-204]
+	mov	ecx, 51					; 00000033H
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
-	mov	ecx, OFFSET __F91FBE2D_Mainfile@cpp
-	call	@__CheckForDebuggerJustMyCode@4
-; Line 9
-	mov	esi, esp
-	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	edi, esp
-	push	1
-	push	OFFSET ??_C@_0BA@NCMFPEOB@Size?5of?5char?5?3?5@
-	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	push	eax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-	add	esp, 8
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
-	cmp	edi, esp
-	call	__RTC_CheckEsp
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-; Line 10
-	mov	esi, esp
-	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	edi, esp
-	push	4
-	push	OFFSET ??_C@_0P@OJKOIDBL@Size?5of?5int?5?3?5@
-	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	push	eax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-	add	esp, 8
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
-	cmp	edi, esp
-	call	__RTC_CheckEsp
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-; Line 11
-	mov	esi, esp
-	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	edi, esp
-	push	2
-	push	OFFSET ??_C@_0BF@OPBLNPLJ@Size?5of?5short?5int?5?3?5@
-	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	push	eax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-	add	esp, 8
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
-	cmp	edi, esp
-	call	__RTC_CheckEsp
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-; Line 12
-	mov	esi, esp
-	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	edi, esp
-	push	4
-	push	OFFSET ??_C@_0BE@HJNKIOAA@Size?5of?5long?5int?5?3?5@
-	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	push	eax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-	add	esp, 8
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
-	cmp	edi, esp
-	call	__RTC_CheckEsp
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-; Line 13
-	mov	esi, esp
-	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	edi, esp
-	push	4
-	push	OFFSET ??_C@_0BB@LKHNILDD@Size?5of?5float?5?3?5@
-	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	push	eax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-	add	esp, 8
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
-	cmp	edi, esp
-	call	__RTC_CheckEsp
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-; Line 14
-	mov	esi, esp
-	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	edi, esp
-	push	8
-	push	OFFSET ??_C@_0BC@JKIGCFCL@Size?5of?5double?5?3?5@
-	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	push	eax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-	add	esp, 8
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
-	cmp	edi, esp
-	call	__RTC_CheckEsp
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-; Line 15
-	mov	esi, esp
-	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	edi, esp
-	push	2
-	push	OFFSET ??_C@_0BD@LGAMIAEI@Size?5of?5wchar_t?5?3?5@
-	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	push	eax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
-	add	esp, 8
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
-	cmp	edi, esp
-	call	__RTC_CheckEsp
-	mov	ecx, eax
-	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
-	cmp	esi, esp
-	call	__RTC_CheckEsp
-; Line 17
-	xor	eax, eax
-; Line 18
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax], 0
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax+4], 1
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax+8], 2
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx+8]
+	mov	DWORD PTR [eax+12], edx
+	mov	eax, DWORD PTR _this$[ebp]
 	pop	edi
 	pop	esi
 	pop	ebx
-	add	esp, 192				; 000000c0H
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+??0Log@@QAE@XZ ENDP					; Log::Log
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT ?Error@Log@@QAEXPBD@Z
+_TEXT	SEGMENT
+_this$ = -8						; size = 4
+_message$ = 8						; size = 4
+?Error@Log@@QAEXPBD@Z PROC				; Log::Error, COMDAT
+; _this$ = ecx
+; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
+; Line 93
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 204				; 000000ccH
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-204]
+	mov	ecx, 51					; 00000033H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, OFFSET __F91FBE2D_Mainfile@cpp
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 94
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [eax+12]
+	cmp	edx, DWORD PTR [ecx]
+	jl	SHORT $LN1@Error
+; Line 95
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	eax, DWORD PTR _message$[ebp]
+	push	eax
+	push	OFFSET ??_C@_08IHOKMCDK@?$FLERROR?$FN?3@
+	mov	ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	ecx
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+$LN1@Error:
+; Line 97
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 204				; 000000ccH
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
 	mov	esp, ebp
 	pop	ebp
-	ret	0
-_main	ENDP
+	ret	4
+?Error@Log@@QAEXPBD@Z ENDP				; Log::Error
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT ?Info@Log@@QAEXPBD@Z
+_TEXT	SEGMENT
+_this$ = -8						; size = 4
+_message$ = 8						; size = 4
+?Info@Log@@QAEXPBD@Z PROC				; Log::Info, COMDAT
+; _this$ = ecx
+; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
+; Line 87
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 204				; 000000ccH
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-204]
+	mov	ecx, 51					; 00000033H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, OFFSET __F91FBE2D_Mainfile@cpp
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 88
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [eax+12]
+	cmp	edx, DWORD PTR [ecx+8]
+	jl	SHORT $LN1@Info
+; Line 89
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	eax, DWORD PTR _message$[ebp]
+	push	eax
+	push	OFFSET ??_C@_07EFAGJHKE@?$FLInfo?$FN?3@
+	mov	ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	ecx
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+$LN1@Info:
+; Line 90
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 204				; 000000ccH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+?Info@Log@@QAEXPBD@Z ENDP				; Log::Info
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT ?Warn@Log@@QAEXPBD@Z
+_TEXT	SEGMENT
+_this$ = -8						; size = 4
+_message$ = 8						; size = 4
+?Warn@Log@@QAEXPBD@Z PROC				; Log::Warn, COMDAT
+; _this$ = ecx
+; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
+; Line 81
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 204				; 000000ccH
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-204]
+	mov	ecx, 51					; 00000033H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, OFFSET __F91FBE2D_Mainfile@cpp
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 82
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [eax+12]
+	cmp	edx, DWORD PTR [ecx+4]
+	jl	SHORT $LN1@Warn
+; Line 83
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	eax, DWORD PTR _message$[ebp]
+	push	eax
+	push	OFFSET ??_C@_0L@NGGLNKAL@?$FLWARNING?$FN?3@
+	mov	ecx, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	ecx
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+$LN1@Warn:
+; Line 84
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 204				; 000000ccH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+?Warn@Log@@QAEXPBD@Z ENDP				; Log::Warn
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT ?setLevel@Log@@QAEXH@Z
+_TEXT	SEGMENT
+_this$ = -8						; size = 4
+_level$ = 8						; size = 4
+?setLevel@Log@@QAEXH@Z PROC				; Log::setLevel, COMDAT
+; _this$ = ecx
+; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
+; Line 76
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 204				; 000000ccH
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-204]
+	mov	ecx, 51					; 00000033H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, OFFSET __F91FBE2D_Mainfile@cpp
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 77
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR _level$[ebp]
+	mov	DWORD PTR [eax+12], ecx
+; Line 78
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 204				; 000000ccH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+?setLevel@Log@@QAEXH@Z ENDP				; Log::setLevel
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT ?eof@?$_Narrow_char_traits@DH@std@@SAHXZ
@@ -1433,7 +1609,7 @@ ___formal$ = 8						; size = 4
 ___formal$ = 12						; size = 4
 ?__empty_global_delete@@YAXPAXI@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
-; Line 19
+; Line 113
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H
@@ -1463,7 +1639,7 @@ _TEXT	SEGMENT
 ___formal$ = 8						; size = 4
 ?__empty_global_delete@@YAXPAX@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
-; Line 19
+; Line 113
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H
