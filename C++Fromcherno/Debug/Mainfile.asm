@@ -55,9 +55,9 @@ __F91FBE2D_Mainfile@cpp DB 01H
 __2A5E89D1_istream DB 01H
 __498EBCEB_ostream DB 01H
 __00FC34F0_streambuf DB 01H
+__E561D725_iterator DB 01H
 __1AD4885C_iosfwd DB 01H
 __9BE6F741_utility DB 01H
-__E561D725_iterator DB 01H
 __6CF96053_xstddef DB 01H
 __811E3AC7_xatomic@h DB 01H
 msvcjmc	ENDS
@@ -75,7 +75,13 @@ PUBLIC	??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std
 PUBLIC	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
 PUBLIC	??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QBE_NXZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::operator bool
 PUBLIC	__JustMyCode_Default
-PUBLIC	??_C@_0M@LACCCNMM@hello?5world@			; `string'
+PUBLIC	??_C@_0BA@NCMFPEOB@Size?5of?5char?5?3?5@	; `string'
+PUBLIC	??_C@_0P@OJKOIDBL@Size?5of?5int?5?3?5@		; `string'
+PUBLIC	??_C@_0BF@OPBLNPLJ@Size?5of?5short?5int?5?3?5@	; `string'
+PUBLIC	??_C@_0BE@HJNKIOAA@Size?5of?5long?5int?5?3?5@	; `string'
+PUBLIC	??_C@_0BB@LKHNILDD@Size?5of?5float?5?3?5@	; `string'
+PUBLIC	??_C@_0BC@JKIGCFCL@Size?5of?5double?5?3?5@	; `string'
+PUBLIC	??_C@_0BD@LGAMIAEI@Size?5of?5wchar_t?5?3?5@	; `string'
 EXTRN	_strlen:PROC
 EXTRN	?uncaught_exception@std@@YA_NXZ:PROC		; std::uncaught_exception
 EXTRN	__imp_?good@ios_base@std@@QBE_NXZ:PROC
@@ -91,10 +97,9 @@ EXTRN	__imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ:PROC
 EXTRN	__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z:PROC
 EXTRN	__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ:PROC
 EXTRN	__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z:PROC
+EXTRN	__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z:PROC
 EXTRN	__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z:PROC
 EXTRN	__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ:PROC
-EXTRN	?start@@YAXXZ:PROC				; start
-EXTRN	?funthree@@YAXXZ:PROC				; funthree
 EXTRN	@_RTC_CheckStackVars@8:PROC
 EXTRN	@__CheckForDebuggerJustMyCode@4:PROC
 EXTRN	@__security_check_cookie@4:PROC
@@ -112,9 +117,33 @@ rtc$TMZ	ENDS
 rtc$IMZ	SEGMENT
 __RTC_InitBase.rtc$IMZ DD FLAT:__RTC_InitBase
 rtc$IMZ	ENDS
-;	COMDAT ??_C@_0M@LACCCNMM@hello?5world@
+;	COMDAT ??_C@_0BD@LGAMIAEI@Size?5of?5wchar_t?5?3?5@
 CONST	SEGMENT
-??_C@_0M@LACCCNMM@hello?5world@ DB 'hello world', 00H	; `string'
+??_C@_0BD@LGAMIAEI@Size?5of?5wchar_t?5?3?5@ DB 'Size of wchar_t : ', 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BC@JKIGCFCL@Size?5of?5double?5?3?5@
+CONST	SEGMENT
+??_C@_0BC@JKIGCFCL@Size?5of?5double?5?3?5@ DB 'Size of double : ', 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BB@LKHNILDD@Size?5of?5float?5?3?5@
+CONST	SEGMENT
+??_C@_0BB@LKHNILDD@Size?5of?5float?5?3?5@ DB 'Size of float : ', 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BE@HJNKIOAA@Size?5of?5long?5int?5?3?5@
+CONST	SEGMENT
+??_C@_0BE@HJNKIOAA@Size?5of?5long?5int?5?3?5@ DB 'Size of long int : ', 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BF@OPBLNPLJ@Size?5of?5short?5int?5?3?5@
+CONST	SEGMENT
+??_C@_0BF@OPBLNPLJ@Size?5of?5short?5int?5?3?5@ DB 'Size of short int : ', 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0P@OJKOIDBL@Size?5of?5int?5?3?5@
+CONST	SEGMENT
+??_C@_0P@OJKOIDBL@Size?5of?5int?5?3?5@ DB 'Size of int : ', 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BA@NCMFPEOB@Size?5of?5char?5?3?5@
+CONST	SEGMENT
+??_C@_0BA@NCMFPEOB@Size?5of?5char?5?3?5@ DB 'Size of char : ', 00H ; `string'
 CONST	ENDS
 ;	COMDAT xdata$x
 xdata$x	SEGMENT
@@ -1131,7 +1160,7 @@ text$x	ENDS
 _TEXT	SEGMENT
 _main	PROC						; COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
-; Line 4
+; Line 8
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H
@@ -1144,24 +1173,135 @@ _main	PROC						; COMDAT
 	rep stosd
 	mov	ecx, OFFSET __F91FBE2D_Mainfile@cpp
 	call	@__CheckForDebuggerJustMyCode@4
-; Line 6
+; Line 9
 	mov	esi, esp
 	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
-	push	OFFSET ??_C@_0M@LACCCNMM@hello?5world@
+	mov	edi, esp
+	push	1
+	push	OFFSET ??_C@_0BA@NCMFPEOB@Size?5of?5char?5?3?5@
 	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
 	push	eax
 	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
 	add	esp, 8
 	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
+	cmp	edi, esp
+	call	__RTC_CheckEsp
+	mov	ecx, eax
 	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
 	cmp	esi, esp
 	call	__RTC_CheckEsp
-; Line 8
-	call	?start@@YAXXZ				; start
-; Line 9
-	call	?funthree@@YAXXZ			; funthree
 ; Line 10
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	edi, esp
+	push	4
+	push	OFFSET ??_C@_0P@OJKOIDBL@Size?5of?5int?5?3?5@
+	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
+	cmp	edi, esp
+	call	__RTC_CheckEsp
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 11
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	edi, esp
+	push	2
+	push	OFFSET ??_C@_0BF@OPBLNPLJ@Size?5of?5short?5int?5?3?5@
+	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
+	cmp	edi, esp
+	call	__RTC_CheckEsp
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 12
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	edi, esp
+	push	4
+	push	OFFSET ??_C@_0BE@HJNKIOAA@Size?5of?5long?5int?5?3?5@
+	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
+	cmp	edi, esp
+	call	__RTC_CheckEsp
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 13
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	edi, esp
+	push	4
+	push	OFFSET ??_C@_0BB@LKHNILDD@Size?5of?5float?5?3?5@
+	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
+	cmp	edi, esp
+	call	__RTC_CheckEsp
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 14
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	edi, esp
+	push	8
+	push	OFFSET ??_C@_0BC@JKIGCFCL@Size?5of?5double?5?3?5@
+	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
+	cmp	edi, esp
+	call	__RTC_CheckEsp
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 15
+	mov	esi, esp
+	push	OFFSET ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	edi, esp
+	push	2
+	push	OFFSET ??_C@_0BD@LGAMIAEI@Size?5of?5wchar_t?5?3?5@
+	mov	eax, DWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	push	eax
+	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
+	add	esp, 8
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z
+	cmp	edi, esp
+	call	__RTC_CheckEsp
+	mov	ecx, eax
+	call	DWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 17
 	xor	eax, eax
+; Line 18
 	pop	edi
 	pop	esi
 	pop	ebx
@@ -1293,7 +1433,7 @@ ___formal$ = 8						; size = 4
 ___formal$ = 12						; size = 4
 ?__empty_global_delete@@YAXPAXI@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
-; Line 11
+; Line 19
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H
@@ -1323,7 +1463,7 @@ _TEXT	SEGMENT
 ___formal$ = 8						; size = 4
 ?__empty_global_delete@@YAXPAX@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Mainfile.cpp
-; Line 11
+; Line 19
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H
