@@ -1,2 +1,3 @@
-﻿  Mainfile.cpp
-  C++Fromcherno.vcxproj -> E:\C++\Thecplusplusrepo\C++Fromcherno\Debug\C++Fromcherno.exe
+﻿  Functions.cpp
+E:\C++\Thecplusplusrepo\C++Fromcherno\Functions.cpp(16,13): warning C4244: 'return': conversion from 'double' to '__int64', possible loss of data
+E:\C++\Thecplusplusrepo\C++Fromcherno\Functions.cpp(19,15): warning C4244: '=': conversion from 'double' to 'int', possible loss of data

@@ -1,6 +1,7 @@
-#include<iostream>
+#include "iostream"
 #include"Headerfile.h"
 #include "test.h"
+#include "stack"
 
 //#include <iostream>
 //using namespace std;
@@ -63,49 +64,62 @@ public:
 //	return 0;
 //}
 
-class Log {
-public:
-	const int LogLevelError = 0;
-	const int LogLevelWarning = 1;
-	const int LogLevelInfo = 2;    
+//class Log {
+//public:
+//	const int LogLevelError = 0;
+//	const int LogLevelWarning = 1;
+//	const int LogLevelInfo = 2;    
+//
+//
+//private:
+//	int m_LogLevel = LogLevelInfo;
+//public:
+//	void setLevel(int level) {
+//		m_LogLevel = level;
+//	}
+//
+//	//Warning
+//	void Warn(const char* message) {
+//		if (m_LogLevel >= LogLevelWarning)
+//		std::cout <<"[WARNING]:" << message << std::endl;
+//	}
+//
+//	//Info
+//	void Info(const char* message) {
+//		if (m_LogLevel >= LogLevelInfo)
+//		std::cout << "[Info]:" << message << std::endl;
+//	}
+//
+//	//Error
+//	void Error(const char* message) {
+//		if(m_LogLevel >= LogLevelError)
+//			std::cout << "[ERROR]:" << message << std::endl;
+//
+//	}
+//
+//};
+//
+//
+//
+//int main() {
+//	Log log;
+//	log.setLevel(log.LogLevelWarning);
+//	log.Warn("Hello!");
+//	log.Error("Hello!");
+//	log.Info("Hello!");
+//	std::cin.get();
+//
+//
+//}
 
 
-private:
-	int m_LogLevel = LogLevelInfo;
-public:
-	void setLevel(int level) {
-		m_LogLevel = level;
-	}
-
-	//Warning
-	void Warn(const char* message) {
-		if (m_LogLevel >= LogLevelWarning)
-		std::cout <<"[WARNING]:" << message << std::endl;
-	}
-
-	//Info
-	void Info(const char* message) {
-		if (m_LogLevel >= LogLevelInfo)
-		std::cout << "[Info]:" << message << std::endl;
-	}
-
-	//Error
-	void Error(const char* message) {
-		if(m_LogLevel >= LogLevelError)
-			std::cout << "[ERROR]:" << message << std::endl;
-
-	}
-
-};
 
 
+extern int s_Variable = 5;
 
 int main() {
-	Log log;
-	log.setLevel(log.LogLevelWarning);
-	log.Warn("Hello!");
-	log.Error("Hello!");
-	log.Info("Hello!");
+
+	std::cout << s_Variable << std::endl;
 	std::cin.get();
 
 
