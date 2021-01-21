@@ -1,4 +1,2 @@
-C:\Users\Vikas\Desktop\C++Fromcherno\Debug\C++Fromcherno.exe
-C:\Users\Vikas\Desktop\C++Fromcherno\Debug\C++Fromcherno.pdb
 E:\C++\Thecplusplusrepo\C++Fromcherno\Debug\C++Fromcherno.exe
 E:\C++\Thecplusplusrepo\C++Fromcherno\Debug\C++Fromcherno.pdb
