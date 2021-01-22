@@ -1,0 +1,12 @@
+DaY: 22-01-2021
+
+DaY one work:
+An overview Of C
+Expressions 
+Statements
+Arrays and Null-Terminated Strings Pointers
+Functions 
+Structures, Union, Enumerations and user defined types 
+C styles Console 
+File I/O
+The Preprocessor and Comments 
