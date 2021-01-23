@@ -63,6 +63,9 @@ __811E3AC7_xatomic@h DB 01H
 msvcjmc	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
+PUBLIC	___local_stdio_printf_options
+PUBLIC	__vfprintf_l
+PUBLIC	_printf
 PUBLIC	?length@?$_Narrow_char_traits@DH@std@@SAIQBD@Z	; std::_Narrow_char_traits<char,int>::length
 PUBLIC	?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NABH0@Z ; std::_Narrow_char_traits<char,int>::eq_int_type
 PUBLIC	?eof@?$_Narrow_char_traits@DH@std@@SAHXZ	; std::_Narrow_char_traits<char,int>::eof
@@ -74,16 +77,23 @@ PUBLIC	?hypo@@YA_JHH@Z					; hypo
 PUBLIC	??$pow@HH$0A@@@YANHH@Z				; pow<int,int,0>
 PUBLIC	?checkkaro@@YAX_J@Z				; checkkaro
 PUBLIC	?ref@@YAXXZ					; ref
+PUBLIC	?printValueOfPi@@YAXH@Z				; printValueOfPi
 PUBLIC	??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
 PUBLIC	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
 PUBLIC	??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
 PUBLIC	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
 PUBLIC	??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QBE_NXZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::operator bool
 PUBLIC	__JustMyCode_Default
+PUBLIC	?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA ; `__local_stdio_printf_options'::`2'::_OptionsStorage
 PUBLIC	??_C@_0CN@LMKNDMNK@This?5is?5from?5functions?4cpp?5your@ ; `string'
 PUBLIC	??_C@_0N@FJBDBAEH@Galat?5h?5kuch@		; `string'
 PUBLIC	??_C@_0BA@JDCIPKNM@sayad?5sahi?5hoga@		; `string'
+PUBLIC	??_C@_06IOIEHCPK@?$CF?4?$CKlf?6@		; `string'
+PUBLIC	__real@4000000000000000
+EXTRN	_acos:PROC
 EXTRN	_pow:PROC
+EXTRN	__imp____acrt_iob_func:PROC
+EXTRN	__imp____stdio_common_vfprintf:PROC
 EXTRN	_strlen:PROC
 EXTRN	?uncaught_exception@std@@YA_NXZ:PROC		; std::uncaught_exception
 EXTRN	__imp_?good@ios_base@std@@QBE_NXZ:PROC
@@ -114,6 +124,14 @@ EXTRN	__ftol2_sse:PROC
 EXTRN	__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A:BYTE
 EXTRN	___security_cookie:DWORD
 EXTRN	__fltused:DWORD
+;	COMDAT ?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA
+_BSS	SEGMENT
+?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA DQ 01H DUP (?) ; `__local_stdio_printf_options'::`2'::_OptionsStorage
+_BSS	ENDS
+;	COMDAT __real@4000000000000000
+CONST	SEGMENT
+__real@4000000000000000 DQ 04000000000000000r	; 2
+CONST	ENDS
 ;	COMDAT rtc$TMZ
 rtc$TMZ	SEGMENT
 __RTC_Shutdown.rtc$TMZ DD FLAT:__RTC_Shutdown
@@ -122,6 +140,10 @@ rtc$TMZ	ENDS
 rtc$IMZ	SEGMENT
 __RTC_InitBase.rtc$IMZ DD FLAT:__RTC_InitBase
 rtc$IMZ	ENDS
+;	COMDAT ??_C@_06IOIEHCPK@?$CF?4?$CKlf?6@
+CONST	SEGMENT
+??_C@_06IOIEHCPK@?$CF?4?$CKlf?6@ DB '%.*lf', 0aH, 00H	; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_0BA@JDCIPKNM@sayad?5sahi?5hoga@
 CONST	SEGMENT
 ??_C@_0BA@JDCIPKNM@sayad?5sahi?5hoga@ DB 'sayad sahi hoga', 00H ; `string'
@@ -636,6 +658,58 @@ $LN1@Sentry_bas:
 	pop	ebp
 	ret	4
 ??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z ENDP ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT ?printValueOfPi@@YAXH@Z
+_TEXT	SEGMENT
+tv76 = -216						; size = 8
+_pi$ = -12						; size = 8
+_N$ = 8							; size = 4
+?printValueOfPi@@YAXH@Z PROC				; printValueOfPi, COMDAT
+; File E:\C++\Thecplusplusrepo\C++Fromcherno\Functions.cpp
+; Line 48
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 216				; 000000d8H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-216]
+	mov	ecx, 54					; 00000036H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	mov	ecx, OFFSET __4FB5D3FE_Functions@cpp
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 52
+	sub	esp, 8
+	xorps	xmm0, xmm0
+	movsd	QWORD PTR [esp], xmm0
+	call	_acos
+	add	esp, 8
+	fstp	QWORD PTR tv76[ebp]
+	movsd	xmm0, QWORD PTR tv76[ebp]
+	mulsd	xmm0, QWORD PTR __real@4000000000000000
+	movsd	QWORD PTR _pi$[ebp], xmm0
+; Line 56
+	sub	esp, 8
+	movsd	xmm0, QWORD PTR _pi$[ebp]
+	movsd	QWORD PTR [esp], xmm0
+	mov	eax, DWORD PTR _N$[ebp]
+	push	eax
+	push	OFFSET ??_C@_06IOIEHCPK@?$CF?4?$CKlf?6@
+	call	_printf
+	add	esp, 16					; 00000010H
+; Line 57
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 216				; 000000d8H
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?printValueOfPi@@YAXH@Z ENDP				; printValueOfPi
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT ?ref@@YAXXZ
@@ -1591,13 +1665,154 @@ __First$ = 8						; size = 4
 ?length@?$_Narrow_char_traits@DH@std@@SAIQBD@Z ENDP	; std::_Narrow_char_traits<char,int>::length
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT _printf
+_TEXT	SEGMENT
+__ArgList$ = -20					; size = 4
+__Result$ = -8						; size = 4
+__Format$ = 8						; size = 4
+_printf	PROC						; COMDAT
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h
+; Line 954
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 228				; 000000e4H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-228]
+	mov	ecx, 57					; 00000039H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	mov	ecx, OFFSET __AD6A91B7_stdio@h
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 957
+	lea	eax, DWORD PTR __Format$[ebp+4]
+	mov	DWORD PTR __ArgList$[ebp], eax
+; Line 958
+	mov	eax, DWORD PTR __ArgList$[ebp]
+	push	eax
+	push	0
+	mov	ecx, DWORD PTR __Format$[ebp]
+	push	ecx
+	mov	esi, esp
+	push	1
+	call	DWORD PTR __imp____acrt_iob_func
+	add	esp, 4
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+	push	eax
+	call	__vfprintf_l
+	add	esp, 16					; 00000010H
+	mov	DWORD PTR __Result$[ebp], eax
+; Line 959
+	mov	DWORD PTR __ArgList$[ebp], 0
+; Line 960
+	mov	eax, DWORD PTR __Result$[ebp]
+; Line 961
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 228				; 000000e4H
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_printf	ENDP
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT __vfprintf_l
+_TEXT	SEGMENT
+__Stream$ = 8						; size = 4
+__Format$ = 12						; size = 4
+__Locale$ = 16						; size = 4
+__ArgList$ = 20						; size = 4
+__vfprintf_l PROC					; COMDAT
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h
+; Line 642
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 192				; 000000c0H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-192]
+	mov	ecx, 48					; 00000030H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	mov	ecx, OFFSET __AD6A91B7_stdio@h
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 643
+	mov	esi, esp
+	mov	eax, DWORD PTR __ArgList$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR __Locale$[ebp]
+	push	ecx
+	mov	edx, DWORD PTR __Format$[ebp]
+	push	edx
+	mov	eax, DWORD PTR __Stream$[ebp]
+	push	eax
+	call	___local_stdio_printf_options
+	mov	ecx, DWORD PTR [eax+4]
+	push	ecx
+	mov	edx, DWORD PTR [eax]
+	push	edx
+	call	DWORD PTR __imp____stdio_common_vfprintf
+	add	esp, 24					; 00000018H
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+; Line 644
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 192				; 000000c0H
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+__vfprintf_l ENDP
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT ___local_stdio_printf_options
+_TEXT	SEGMENT
+___local_stdio_printf_options PROC			; COMDAT
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_stdio_config.h
+; Line 86
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 192				; 000000c0H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-192]
+	mov	ecx, 48					; 00000030H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	mov	ecx, OFFSET __F66CEB67_corecrt_stdio_config@h
+	call	@__CheckForDebuggerJustMyCode@4
+; Line 88
+	mov	eax, OFFSET ?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA ; `__local_stdio_printf_options'::`2'::_OptionsStorage
+; Line 89
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 192				; 000000c0H
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+___local_stdio_printf_options ENDP
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT ?__empty_global_delete@@YAXPAXI@Z
 _TEXT	SEGMENT
 ___formal$ = 8						; size = 4
 ___formal$ = 12						; size = 4
 ?__empty_global_delete@@YAXPAXI@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Functions.cpp
-; Line 44
+; Line 58
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H
@@ -1627,7 +1842,7 @@ _TEXT	SEGMENT
 ___formal$ = 8						; size = 4
 ?__empty_global_delete@@YAXPAX@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\C++\Thecplusplusrepo\C++Fromcherno\Functions.cpp
-; Line 44
+; Line 58
 	push	ebp
 	mov	ebp, esp
 	sub	esp, 192				; 000000c0H

@@ -113,14 +113,24 @@ public:
 //}
 
 
+//int main() {
+//
+//	char ch = 'B';
+//	int x = 1223;
+//	//ch = x;
+//	x = ch;
+//	std::cout << x << std::endl;
+//	std::cin.get();
 
+extern const int jamal;
+int main (){
 
-extern int s_Variable = 5;
+	int N = 50;
 
-int main() {
-
-	std::cout << s_Variable << std::endl;
-	std::cin.get();
+	// Function that prints 
+	// the value of pi 
+	printValueOfPi(N);
+	return 0;
 
 
 }

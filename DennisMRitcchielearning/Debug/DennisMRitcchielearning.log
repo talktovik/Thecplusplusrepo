@@ -1,0 +1,7 @@
+﻿  Functions.cpp
+E:\C++\Thecplusplusrepo\DennisMRitcchielearning\Functions.cpp(10,2): error C3861: 'the_range': identifier not found
+E:\C++\Thecplusplusrepo\DennisMRitcchielearning\Functions.cpp(16,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\C++\Thecplusplusrepo\DennisMRitcchielearning\Functions.cpp(17,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\C++\Thecplusplusrepo\DennisMRitcchielearning\Functions.cpp(21,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  mainFile.cpp
+  Generating Code...
