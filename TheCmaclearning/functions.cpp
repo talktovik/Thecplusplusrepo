@@ -2,6 +2,7 @@
 // Created by Sebestian on 25/01/21.
 //
 #include<iostream>
+#include<fstream> //file IO
 void  add(int i, int j){
     std::cout<< "in the add function \n";
     std::cout <<"The sum would be :" << i + j << std::endl;
@@ -37,5 +38,28 @@ void Z_exception(void){
 
     std::cout << "division result "<< result << std::endl ;
     std::cin.get();
+}
+
+// another function
+void file_handle1(){
+    // Lets take the user name as input and do something with that.
+    char arr[100];
+    std::cout << "Enter your name"<< std::endl;
+    std::cin.getline(arr, 100);
+    std::ofstream the_file("db.txt");
+    the_file << arr;
+    the_file.close();
+    std::cout<<"The write operation happen." << std::endl<<std::endl;
+
+}
+// another function here
+void file_handle()  {
+    char arr[100];
+    std::ifstream obj("db.txt");
+    obj.getline(arr, 100);
+    std::cout << "the content in the file would be :"<< arr <<std::endl;
+    obj.close();
+    std::cout<<"Operation of the read performed"<< std:: endl;
+
 }
 

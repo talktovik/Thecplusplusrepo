@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/apple/CLionProjects/TheCmaclearning/functions.cpp" "/Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles/TheCmaclearning.dir/functions.cpp.o"
-  "/Users/apple/CLionProjects/TheCmaclearning/main.cpp" "/Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles/TheCmaclearning.dir/main.cpp.o"
+  "/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/functions.cpp" "/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles/TheCmaclearning.dir/functions.cpp.o"
+  "/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/main.cpp" "/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles/TheCmaclearning.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

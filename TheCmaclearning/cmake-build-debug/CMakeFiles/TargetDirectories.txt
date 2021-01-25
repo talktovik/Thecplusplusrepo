@@ -1,3 +1,3 @@
-/Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles/TheCmaclearning.dir
+/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles/TheCmaclearning.dir

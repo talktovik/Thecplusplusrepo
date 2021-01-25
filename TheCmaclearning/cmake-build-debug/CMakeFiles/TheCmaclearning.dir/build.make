@@ -63,10 +63,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/apple/CLionProjects/TheCmaclearning
+CMAKE_SOURCE_DIR = /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TheCmaclearning.dir/depend.make
@@ -79,29 +79,29 @@ include CMakeFiles/TheCmaclearning.dir/flags.make
 
 CMakeFiles/TheCmaclearning.dir/main.cpp.o: CMakeFiles/TheCmaclearning.dir/flags.make
 CMakeFiles/TheCmaclearning.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TheCmaclearning.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TheCmaclearning.dir/main.cpp.o -c /Users/apple/CLionProjects/TheCmaclearning/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TheCmaclearning.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TheCmaclearning.dir/main.cpp.o -c /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/main.cpp
 
 CMakeFiles/TheCmaclearning.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TheCmaclearning.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/CLionProjects/TheCmaclearning/main.cpp > CMakeFiles/TheCmaclearning.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/main.cpp > CMakeFiles/TheCmaclearning.dir/main.cpp.i
 
 CMakeFiles/TheCmaclearning.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TheCmaclearning.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/CLionProjects/TheCmaclearning/main.cpp -o CMakeFiles/TheCmaclearning.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/main.cpp -o CMakeFiles/TheCmaclearning.dir/main.cpp.s
 
 CMakeFiles/TheCmaclearning.dir/functions.cpp.o: CMakeFiles/TheCmaclearning.dir/flags.make
 CMakeFiles/TheCmaclearning.dir/functions.cpp.o: ../functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TheCmaclearning.dir/functions.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TheCmaclearning.dir/functions.cpp.o -c /Users/apple/CLionProjects/TheCmaclearning/functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TheCmaclearning.dir/functions.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TheCmaclearning.dir/functions.cpp.o -c /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/functions.cpp
 
 CMakeFiles/TheCmaclearning.dir/functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TheCmaclearning.dir/functions.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/CLionProjects/TheCmaclearning/functions.cpp > CMakeFiles/TheCmaclearning.dir/functions.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/functions.cpp > CMakeFiles/TheCmaclearning.dir/functions.cpp.i
 
 CMakeFiles/TheCmaclearning.dir/functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TheCmaclearning.dir/functions.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/CLionProjects/TheCmaclearning/functions.cpp -o CMakeFiles/TheCmaclearning.dir/functions.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/functions.cpp -o CMakeFiles/TheCmaclearning.dir/functions.cpp.s
 
 # Object files for target TheCmaclearning
 TheCmaclearning_OBJECTS = \
@@ -115,7 +115,7 @@ TheCmaclearning: CMakeFiles/TheCmaclearning.dir/main.cpp.o
 TheCmaclearning: CMakeFiles/TheCmaclearning.dir/functions.cpp.o
 TheCmaclearning: CMakeFiles/TheCmaclearning.dir/build.make
 TheCmaclearning: CMakeFiles/TheCmaclearning.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TheCmaclearning"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TheCmaclearning"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TheCmaclearning.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/TheCmaclearning.dir/clean:
 .PHONY : CMakeFiles/TheCmaclearning.dir/clean
 
 CMakeFiles/TheCmaclearning.dir/depend:
-	cd /Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/apple/CLionProjects/TheCmaclearning /Users/apple/CLionProjects/TheCmaclearning /Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug /Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug /Users/apple/CLionProjects/TheCmaclearning/cmake-build-debug/CMakeFiles/TheCmaclearning.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug /Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/cmake-build-debug/CMakeFiles/TheCmaclearning.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TheCmaclearning.dir/depend
 

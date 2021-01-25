@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/apple/CLionProjects/TheCmaclearning/functions.cpp
+/Users/apple/Documents/GitHub/Thecplusplusrepo/TheCmaclearning/functions.cpp
 iostream
+-
+fstream
 -
 
